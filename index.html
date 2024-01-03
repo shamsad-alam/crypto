@@ -17,6 +17,13 @@
 <body>
     <div class="main">
         <header>
+            <div class="toglemenu" onclick="myFunction(this)">
+                <div class="togle" onclick="togle2()">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
             <nav>
                 <div class="logo">
                     <img src="./image/logo2.png" alt="">
@@ -408,6 +415,19 @@
             faq_box1[i].addEventListener('click', function () {
                 this.classList.toggle("active");
             })
+        }
+
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+
+        function togle2() {
+            var nave = document.querySelector(".list");
+            if (nave.style.display == "block") {
+                nave.style.display = "none";
+            } else {
+                nave.style.display = "block";
+            }
         }
     </script>
 </body>

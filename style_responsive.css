@@ -116,6 +116,7 @@
         top: 48px;
         padding: 0 10px;
     }
+
     footer {
         width: 90%;
     }
@@ -127,14 +128,63 @@
 
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 876px) {
+    .togle {
+        display: block;
+        padding: 0px 35px;
+        z-index: 101;
+    }
+    .list {
+        display: none;
+    }
+
+    nav .list {
+        display: none;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: fit-content;
+        padding: 50px 40px;
+        background-color: rgba(0, 0, 0, 0.95);
+        z-index: 100;
+        transition: all 0.3s ease-in-out;
+        border: 1px solid gray;
+    }
+
+    nav .list>li {
+        padding: 10px 0;
+    }
+
+    nav .list li a {
+        font-size: 15px;
+        font-weight: 400;
+    }
+
     nav .logo {
         margin-top: 25px;
     }
 
-    .list {
-        display: none;
+    .home_nav ul {
+        position: absolute;
+        width: 170px;
+        left: 100px;
+        top: 100px;
     }
+
+    .home_nav li {
+        width: 170px;
+    }
+
+    .nav_btn {
+        margin-top: 20px;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
 
     .banner {
         height: 90vh;
@@ -248,10 +298,12 @@
     .testimmonial .tes_review .customer {
         width: 50%;
     }
-    .email  input{
+
+    .email input {
         width: 60%;
         height: 50px;
     }
+
     .email button {
         width: 18%;
         height: 40px;
@@ -273,6 +325,36 @@
 }
 
 @media only screen and (max-width: 425px) {
+    .togle {
+        padding: 0px 20px;
+    }
+    nav .list {
+        padding: 20px 20px;
+    }
+    .home_nav ul {
+        left: 70px;
+        top: 70px;
+    }
+    
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin-bottom: 5px;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        transform: translate(0, 8px) rotate(-45deg);
+    }
+
+    .change .bar3 {
+        transform: translate(0, -8px) rotate(45deg);
+    }
+
     .bann-text h1 {
         font-size: 30px;
         margin: 10px 0;
@@ -382,18 +464,22 @@
     .review_cont .review_img .imgsec p {
         display: none;
     }
-    .faq .trans_content .tran_img{
+
+    .faq .trans_content .tran_img {
         width: 100%;
     }
-    .email .feature_title{
+
+    .email .feature_title {
         width: 100%;
     }
-    .email  input{
+
+    .email input {
         width: 100%;
         height: 50px;
         font-size: 14px;
         padding: 0 10px;
     }
+
     .email button {
         width: 40%;
         height: 40px;
